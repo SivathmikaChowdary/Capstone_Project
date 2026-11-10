@@ -1,0 +1,244 @@
+{
+ "format": "appendixai-imaging-1",
+ "model_name": "ResNet18 + fusion MLP",
+ "classes": [
+  "No appendicitis",
+  "Uncomplicated",
+  "Complicated"
+ ],
+ "image_size": 224,
+ "normalize": {
+  "mean": [
+   0.485,
+   0.456,
+   0.406
+  ],
+  "std": [
+   0.229,
+   0.224,
+   0.225
+  ]
+ },
+ "feature_channels": 512,
+ "input_order": [
+  "clinical",
+  "us_mean",
+  "us_max"
+ ],
+ "clinical_preprocessing": {
+  "numeric_columns": [
+   "Age",
+   "BMI",
+   "Height",
+   "Weight",
+   "Appendix_Diameter",
+   "Body_Temperature",
+   "WBC_Count",
+   "Neutrophil_Percentage",
+   "RBC_Count",
+   "Hemoglobin",
+   "RDW",
+   "Thrombocyte_Count",
+   "CRP"
+  ],
+  "medians": [
+   11.375,
+   17.7,
+   149.8,
+   41.0,
+   7.5,
+   37.2,
+   12.5,
+   77.5,
+   4.79,
+   13.4,
+   12.649999999999999,
+   275.0,
+   7.0
+  ],
+  "indicator_columns": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "scaler_mean": null,
+  "scaler_scale": null,
+  "categorical_columns": [
+   "Sex",
+   "Appendix_on_US",
+   "Migratory_Pain",
+   "Lower_Right_Abd_Pain",
+   "Contralateral_Rebound_Tenderness",
+   "Coughing_Pain",
+   "Nausea",
+   "Loss_of_Appetite",
+   "Neutrophilia",
+   "Ketones_in_Urine",
+   "RBC_in_Urine",
+   "WBC_in_Urine",
+   "Dysuria",
+   "Stool",
+   "Peritonitis",
+   "Psoas_Sign",
+   "Ipsilateral_Rebound_Tenderness",
+   "US_Performed",
+   "Free_Fluids"
+  ],
+  "categories": [
+   [
+    "Missing",
+    "female",
+    "male"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "+",
+    "++",
+    "+++",
+    "Missing",
+    "no"
+   ],
+   [
+    "+",
+    "++",
+    "+++",
+    "Missing",
+    "no"
+   ],
+   [
+    "+",
+    "++",
+    "+++",
+    "Missing",
+    "no"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "constipation",
+    "constipation, diarrhea",
+    "diarrhea",
+    "normal"
+   ],
+   [
+    "Missing",
+    "generalized",
+    "local",
+    "no"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ],
+   [
+    "Missing",
+    "no",
+    "yes"
+   ]
+  ],
+  "fill_value": "Missing"
+ },
+ "layers": [
+  {
+   "type": "linear",
+   "weight": "l0_w",
+   "bias": "l0_b"
+  },
+  {
+   "type": "relu"
+  },
+  {
+   "type": "identity"
+  },
+  {
+   "type": "linear",
+   "weight": "l3_w",
+   "bias": "l3_b"
+  },
+  {
+   "type": "relu"
+  },
+  {
+   "type": "identity"
+  },
+  {
+   "type": "linear",
+   "weight": "l6_w",
+   "bias": "l6_b"
+  }
+ ],
+ "reference": {
+  "us_mean": "ref_us_mean",
+  "us_max": "ref_us_max"
+ },
+ "metrics": {
+  "accuracy": 0.7356,
+  "macro_f1": 0.7053,
+  "complicated_recall": 0.5714,
+  "test_patients": 87
+ },
+ "source": "Exported from the AppendixAi Kaggle notebook with research/export_imaging_for_app.py"
+}

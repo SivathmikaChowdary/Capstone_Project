@@ -1,0 +1,19 @@
+sample_id,true_diagnosis,Age,BMI,Sex,Height,Weight,Appendix_on_US,Appendix_Diameter,Migratory_Pain,Lower_Right_Abd_Pain,Contralateral_Rebound_Tenderness,Coughing_Pain,Nausea,Loss_of_Appetite,Body_Temperature,WBC_Count,Neutrophil_Percentage,Neutrophilia,RBC_Count,Hemoglobin,RDW,Thrombocyte_Count,Ketones_in_Urine,RBC_in_Urine,WBC_in_Urine,CRP,Dysuria,Stool,Peritonitis,Psoas_Sign,Ipsilateral_Rebound_Tenderness,US_Performed,Free_Fluids,scans
+Patient 1,Complicated,6.25,14.863258026159334,female,116.0,20.0,yes,9.0,no,yes,yes,yes,yes,yes,37.1,15.3,79.2,yes,4.5,12.8,12.3,341.0,,,,34.0,,,no,yes,,no,,
+Patient 2,Complicated,9.26,14.06,male,138.6,27.0,yes,12.0,no,yes,no,no,no,yes,38.0,19.0,91.2,yes,5.24,14.8,12.6,291.0,+++,no,no,20.0,no,normal,local,yes,yes,yes,,
+Patient 3,Complicated,11.63,16.34,female,154.5,39.0,no,,no,yes,yes,yes,yes,yes,37.8,20.0,,,,,,,,,,43.0,no,normal,local,yes,,yes,yes,
+Patient 4,Uncomplicated,5.0321697467488,14.5179584120983,male,115.0,19.2,yes,6.0,no,yes,no,no,no,no,40.0,13.7,,yes,4.79,12.8,14.4,231.0,,,,15.0,no,diarrhea,no,no,no,yes,no,
+Patient 5,Uncomplicated,13.83,17.3,female,170.0,50.0,no,,no,yes,yes,,no,no,37.1,5.5,57.0,no,4.16,12.6,12.2,336.0,no,+++,no,1.0,,normal,generalized,yes,,yes,no,
+Patient 6,Uncomplicated,8.01368925393566,15.2378533674069,male,125.5,24.0,yes,8.0,no,yes,no,yes,no,no,37.0,7.4,65.4,no,4.87,13.2,12.3,353.0,,,,15.0,no,normal,no,no,,yes,yes,
+Patient 7,No appendicitis,6.76,15.5,female,122.0,22.9,yes,5.0,yes,yes,no,yes,no,no,37.4,19.7,75.5,yes,4.77,13.4,12.2,330.0,,,,1.0,no,normal,no,no,yes,yes,yes,
+Patient 8,No appendicitis,10.7186858316222,20.5049339997437,male,153.0,48.0,no,,no,yes,yes,yes,no,no,38.8,11.4,54.0,no,5.23,13.8,13.5,276.0,,,,1.0,no,normal,no,yes,no,yes,no,
+Patient 9,No appendicitis,9.3305954825462,15.3787004998078,female,127.5,25.0,yes,5.0,no,yes,no,no,no,yes,36.4,7.6,54.1,no,5.09,15.0,11.9,302.0,no,no,no,0.0,no,normal,no,yes,no,yes,yes,
+Case 567 with scans,Complicated,16.9,33.08,female,173.0,99.0,yes,9.0,no,yes,yes,no,yes,yes,36.9,26.4,83.6,yes,4.59,14.2,12.6,237.0,+++,no,no,193.0,no,normal,local,yes,,yes,no,567_1.jpg
+Case 299 with scans,Complicated,5.9192334017796,16.0618679357525,male,123.0,24.3,yes,,yes,yes,no,no,yes,yes,39.0,11.8,82.8,yes,5.33,12.9,14.7,309.0,,,,20.0,no,normal,local,yes,no,yes,yes,299_1.jpg
+Case 285 with scans,Complicated,10.2532511978097,16.8887220866954,male,146.0,36.0,yes,9.0,no,yes,no,no,no,no,36.8,16.2,84.3,yes,4.49,12.6,12.8,227.0,,,,93.0,yes,constipation,local,yes,,yes,yes,285_1.jpg;285_2.jpg
+Case 162 with scans,Uncomplicated,12.8240930869268,16.9844576189713,male,158.0,42.4,yes,8.0,no,yes,no,yes,no,yes,37.0,6.4,,,,,,,+++,++,no,28.0,no,diarrhea,local,yes,no,yes,yes,162_1.jpg;162_2.jpg
+Case 169 with scans,Uncomplicated,12.145106091718,14.4211900219969,male,165.5,39.5,yes,7.9,no,yes,no,no,yes,no,36.8,12.5,74.9,no,4.85,13.6,12.9,283.0,no,no,no,12.0,no,normal,local,no,,yes,no,169_1.jpg;169_2.jpg
+Case 484 with scans,Uncomplicated,7.81,,male,,23.0,yes,6.0,no,yes,yes,yes,yes,yes,36.0,13.0,87.6,yes,4.44,12.4,13.0,403.0,++,+,no,8.0,no,diarrhea,generalized,no,yes,yes,yes,484_1.jpg
+Case 366 with scans,No appendicitis,14.8720054757016,16.1872644316604,male,177.5,51.0,yes,5.0,no,yes,yes,no,no,no,36.0,12.9,67.0,no,5.25,15.3,12.4,252.0,no,no,no,0.0,no,normal,generalized,yes,no,yes,no,366_1.jpg
+Case 962 with scans,No appendicitis,6.9,12.9,female,115.0,16.7,yes,5.0,no,no,yes,no,yes,yes,37.0,10.0,83.5,yes,4.5,12.6,11.9,359.0,no,+,++,0.0,no,constipation,local,no,no,yes,no,962_1.jpg;962_2.jpg
+Case 416 with scans,No appendicitis,17.1006160164271,23.4190279602177,male,182.5,78.0,no,,no,yes,yes,no,yes,no,37.0,8.7,77.5,yes,4.93,15.0,12.6,261.0,+,no,no,13.0,no,constipation,no,no,no,yes,yes,416_1.jpg

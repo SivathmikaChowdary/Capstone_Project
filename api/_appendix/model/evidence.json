@@ -1,0 +1,29 @@
+{
+  "note": "Clinical and fusion results come from different test sets (156 clinical-test patients vs 99 paired multimodal patients), so they are not directly comparable. A shared-split, nested cross-validation comparison is planned (research/README.md).",
+  "experiments": [
+    {"model": "Tuned CatBoost (deployed)", "modality": "Clinical", "protocol": "156-patient locked test", "accuracy": 0.859, "macro_f1": 0.8163, "complicated_recall": 0.5833},
+    {"model": "Tuned XGBoost", "modality": "Clinical", "protocol": "156-patient locked test", "accuracy": 0.859, "macro_f1": 0.80, "complicated_recall": 0.50},
+    {"model": "Class-weighted XGBoost", "modality": "Clinical", "protocol": "156-patient locked test", "accuracy": 0.8462, "macro_f1": 0.80, "complicated_recall": 0.62},
+    {"model": "Tuned Random Forest", "modality": "Clinical", "protocol": "156-patient locked test", "accuracy": 0.7821, "macro_f1": 0.73, "complicated_recall": 0.50},
+    {"model": "ResNet18 mean + max MLP", "modality": "Ultrasound", "protocol": "87-patient patient-level test", "accuracy": 0.5862, "macro_f1": 0.5422, "complicated_recall": 0.36},
+    {"model": "Fine-tuned ResNet18", "modality": "Ultrasound", "protocol": "87-patient patient-level test", "accuracy": 0.5747, "macro_f1": 0.5365, "complicated_recall": 0.40},
+    {"model": "EfficientNet-B0", "modality": "Ultrasound", "protocol": "87-patient patient-level test", "accuracy": 0.4828, "macro_f1": 0.468, "complicated_recall": 0.60},
+    {"model": "Fusion MLP (clinical + ultrasound)", "modality": "Multimodal", "protocol": "99-patient paired locked test", "accuracy": 0.7071, "macro_f1": 0.6921, "complicated_recall": 0.625}
+  ],
+  "fusion_confusion_matrix": [[26, 8, 0], [9, 34, 6], [1, 5, 10]],
+  "dataset": {
+    "name": "Regensburg Pediatric Appendicitis Dataset",
+    "patients": 780,
+    "ultrasound_patients": 579,
+    "ultrasound_images": 1709,
+    "paired_cohort": 491,
+    "classes": {"No appendicitis": 317, "Uncomplicated": 345, "Complicated": 118}
+  },
+  "limitations": [
+    "Single-centre, retrospective data from one children's hospital; no external validation yet.",
+    "\"Complicated\" is the dataset's severity label (it includes perforation, abscess and similar) and is not a direct perforation test.",
+    "The ultrasound branch uses frozen ImageNet features; raw images added little beyond the structured ultrasound report in our experiments.",
+    "Uncertainty thresholds are heuristics until conformal calibration on held-out data is completed.",
+    "Grad-CAM heatmaps show model attention and are not anatomical or pathological localisation."
+  ]
+}

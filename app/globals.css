@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f8fa;
+  --surface: #ffffff;
+  --surface-2: #f1f4f7;
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --muted: #64748b;
+  --line: #e3e8ee;
+  --accent: #0f766e;
+  --accent-ink: #ffffff;
+  --accent-soft: #e6f4f1;
+  --c0: #15803d;
+  --c0-soft: #e8f6ec;
+  --c1: #b45309;
+  --c1-soft: #fdf3e3;
+  --c2: #be123c;
+  --c2-soft: #fdecef;
+  --warn: #92400e;
+  --warn-soft: #fff7e6;
+  --warn-line: #f5d9a6;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1016;
+    --surface: #111821;
+    --surface-2: #17202b;
+    --ink: #e6edf3;
+    --ink-2: #c4cdd6;
+    --muted: #8b98a7;
+    --line: #232e3b;
+    --accent: #2dd4bf;
+    --accent-ink: #04211d;
+    --accent-soft: #0f2a28;
+    --c0: #4ade80;
+    --c0-soft: #102a1b;
+    --c1: #fbbf24;
+    --c1-soft: #2d2311;
+    --c2: #fb7185;
+    --c2-soft: #311520;
+    --warn: #fcd34d;
+    --warn-soft: #2a2110;
+    --warn-line: #5c4715;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-c0: var(--c0);
+  --color-c0-soft: var(--c0-soft);
+  --color-c1: var(--c1);
+  --color-c1-soft: var(--c1-soft);
+  --color-c2: var(--c2);
+  --color-c2-soft: var(--c2-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-warn-line: var(--warn-line);
+  --shadow-card: var(--shadow);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html { color-scheme: light dark; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+.tnum { font-variant-numeric: tabular-nums; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media print {
+  header, footer, .no-print { display: none !important; }
+  body { background: #fff; }
+}
